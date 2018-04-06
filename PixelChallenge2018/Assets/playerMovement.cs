@@ -7,7 +7,7 @@ public class playerMovement : MonoBehaviour {
     float timeUpdate = 0.2f;
     float timeLeft = 0;
     Vector3 moveDirection;
-    float distCommune = 0.6f;
+    float distCommune = 0.5f;
 
     // Use this for initialization
     void Start ()
@@ -20,7 +20,6 @@ public class playerMovement : MonoBehaviour {
         moveDirection = new Vector3(Input.GetAxis("Joystick Direction X"), -Input.GetAxis("Joystick Direction Y"), 0);
         if (Mathf.Abs(moveDirection.x) == 1)
         {
-            Debug.Log("Pe");
             if (moveDirection.x > 0)
                 moveDirection = transform.TransformDirection(distCommune, 0, 0);
             else
