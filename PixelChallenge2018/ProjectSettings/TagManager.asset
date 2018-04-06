@@ -6,6 +6,8 @@ TagManager:
   tags:
   - button
   - Active
+  - Spawn
+  - Wall
   layers:
   - Default
   - TransparentFX
