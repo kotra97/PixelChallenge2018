@@ -36,14 +36,14 @@ public class PlayerColor : MonoBehaviour {
 
 	void OnTriggerEnter2D(Collider2D other)
 	{
-		if (other.gameObject.tag == "Spawn")
+		if (other.gameObject.tag == "Light")
 		{
 			sr.color = additionColor(sr.color, other.gameObject.GetComponent<SpriteRenderer>().color);
 			Destroy(other.gameObject);
 		}
         if (other.gameObject.tag == "Wall")
         {
-            other.GetComponent<WallCmp>().updatePlayer(this.gameObject);
+            other.GetComponent<WallScript>().updatePlayer(this.gameObject);
         }
 	}
 }
