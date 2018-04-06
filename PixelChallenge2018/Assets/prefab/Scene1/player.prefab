@@ -20,10 +20,11 @@ GameObject:
   m_Component:
   - component: {fileID: 4253713708653260}
   - component: {fileID: 212168077886810698}
-  - component: {fileID: 114758352008923532}
   - component: {fileID: 58884552040283056}
   - component: {fileID: 50145403538888986}
   - component: {fileID: 95007494142577298}
+  - component: {fileID: 114541303556784044}
+  - component: {fileID: 114170643982949366}
   m_Layer: 0
   m_Name: player
   m_TagString: Untagged
@@ -38,7 +39,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1494031729308328}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.02, y: 1.37, z: -2}
+  m_LocalPosition: {x: 0, y: 0, z: -2}
   m_LocalScale: {x: 0.1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -88,7 +89,7 @@ Animator:
   m_GameObject: {fileID: 1494031729308328}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 24e47557bc1ac1044a8fa60426d33250, type: 2}
+  m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -97,7 +98,7 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
---- !u!114 &114758352008923532
+--- !u!114 &114170643982949366
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
@@ -105,10 +106,20 @@ MonoBehaviour:
   m_GameObject: {fileID: 1494031729308328}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: bbe2ad90f47e2794c9e3c3475ebe3a9f, type: 3}
+  m_Script: {fileID: 11500000, guid: 79f482fb255110047857532f64bf0461, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  door: {fileID: 0}
+--- !u!114 &114541303556784044
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1494031729308328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3fffba0afb85d36418b4a9a67b7cddde, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!212 &212168077886810698
 SpriteRenderer:
   m_ObjectHideFlags: 1
