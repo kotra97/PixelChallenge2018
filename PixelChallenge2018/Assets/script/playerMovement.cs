@@ -14,26 +14,36 @@ public class playerMovement : MonoBehaviour {
     {
 		
 	}
-	
+
     private void movement()
     {
         moveDirection = new Vector3(Input.GetAxis("Joystick Direction X"), -Input.GetAxis("Joystick Direction Y"), 0);
         if (Mathf.Abs(moveDirection.x) == 1)
         {
             if (moveDirection.x > 0)
-                moveDirection = transform.TransformDirection(distCommune, 0, 0);
+			{
+                transform.position += new Vector3(distCommune, 0, 0);
+				transform.rotation = Quaternion.Euler(0, 0, 90f);
+			}
             else
-                moveDirection = transform.TransformDirection(-distCommune, 0, 0);
-            transform.position += moveDirection;
+			{
+                transform.position += new Vector3(-distCommune, 0, 0);
+				transform.rotation = Quaternion.Euler(0, 0, -90f);
+			}
             timeLeft = timeUpdate;
         }
         else if (Mathf.Abs(moveDirection.y) == 1)
         {
             if (moveDirection.y > 0)
-                moveDirection = transform.TransformDirection(0, distCommune, 0);
+			{
+                transform.position += new Vector3(0, distCommune, 0);
+				transform.rotation = Quaternion.Euler(0, 0, 180f);
+			}
             else
-                moveDirection = transform.TransformDirection(0, -distCommune, 0);
-            transform.position += moveDirection;
+			{
+                transform.position += new Vector3(0, -distCommune, 0);
+				transform.rotation = Quaternion.Euler(0, 0, 0);
+			}
             timeLeft = timeUpdate;
         }
     }
