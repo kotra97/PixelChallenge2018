@@ -10,6 +10,7 @@ TagManager:
   - Color
   - Light
   - border
+  - Layout
   layers:
   - Default
   - TransparentFX
