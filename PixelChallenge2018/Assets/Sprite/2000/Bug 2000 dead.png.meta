@@ -1,15 +1,15 @@
 fileFormatVersion: 2
-guid: ee36f7ca54a8dee4988dfc3f275963e7
+guid: 92a04c1abd7e2e44290744398c544a95
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Bug 2000_0
-    21300002: Bug 2000_1
-    21300004: Bug 2000_2
-    21300006: Bug 2000_3
-    21300008: Bug 2000_4
-    21300010: Bug 2000_5
-    21300012: Bug 2000_6
-    21300014: Bug 2000_7
+    21300000: Bug 2000 dead_0
+    21300002: Bug 2000 dead_1
+    21300004: Bug 2000 dead_2
+    21300006: Bug 2000 dead_3
+    21300008: Bug 2000 dead_4
+    21300010: Bug 2000 dead_5
+    21300012: Bug 2000 dead_6
+    21300014: Bug 2000 dead_7
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -86,50 +86,17 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Bug 2000_0
+      name: Bug 2000 dead_0
       rect:
         serializedVersion: 2
         x: 0
-        y: 512
-        width: 512
-        height: 512
+        y: 500
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -137,19 +104,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 63d24a7c6ca548c43b5a8e5a4455e279
+      spriteID: 0af6cce756fb656459ce5f48b56371ab
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bug 2000_1
+      name: Bug 2000 dead_1
       rect:
         serializedVersion: 2
-        x: 512
-        y: 512
-        width: 512
-        height: 512
+        x: 500
+        y: 500
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -157,19 +124,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 296134c5b09c6f84dab87663bef20686
+      spriteID: 5f38256c0d8f33e428892b91ce1584b9
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bug 2000_2
+      name: Bug 2000 dead_2
       rect:
         serializedVersion: 2
-        x: 1024
-        y: 512
-        width: 512
-        height: 512
+        x: 1000
+        y: 500
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -177,19 +144,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 314e0998ea78d0046afab32dc10c6590
+      spriteID: 1384cf5173bed714abd366894e7161d7
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bug 2000_3
+      name: Bug 2000 dead_3
       rect:
         serializedVersion: 2
-        x: 1536
-        y: 512
-        width: 512
-        height: 512
+        x: 1500
+        y: 500
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -197,19 +164,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 45e984a42c0f26347b8c4656f94ec46d
+      spriteID: 67cf13607dc5ff24eb97f8540f04422c
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bug 2000_4
+      name: Bug 2000 dead_4
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 512
-        height: 512
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,19 +184,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e382011e92153a94abb144c1ca2b2dfd
+      spriteID: 8ae16e5c543dfd849b2c695ccb3f2138
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bug 2000_5
+      name: Bug 2000 dead_5
       rect:
         serializedVersion: 2
-        x: 512
+        x: 500
         y: 0
-        width: 512
-        height: 512
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -237,19 +204,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 15825c7ebf79e1d45aa38090ff4efaf5
+      spriteID: 6edc456b0cb4c244fa04c8c6e3231c44
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bug 2000_6
+      name: Bug 2000 dead_6
       rect:
         serializedVersion: 2
-        x: 1024
+        x: 1000
         y: 0
-        width: 512
-        height: 512
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -257,19 +224,19 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 50975ec4c29c8b049b15135a922e0e4e
+      spriteID: 592ae98b364be5649b9a0d7d00f39af2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: Bug 2000_7
+      name: Bug 2000 dead_7
       rect:
         serializedVersion: 2
-        x: 1536
+        x: 1500
         y: 0
-        width: 512
-        height: 512
+        width: 500
+        height: 500
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -277,7 +244,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: adcd60a7ab818bd4e92bb22121515b66
+      spriteID: 93d52eb2396e4c44b9c93b61cd8ff75b
       vertices: []
       indices: 
       edges: []
@@ -285,7 +252,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 099e5eacb1f426c4ea3ed514e5569bd9
+    spriteID: 07ce4470b75d99643b97c0c4da7dd34f
     vertices: []
     indices: 
     edges: []
