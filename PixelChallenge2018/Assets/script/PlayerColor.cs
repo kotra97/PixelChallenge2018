@@ -3,12 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerColor : MonoBehaviour {
-
+    public GameObject[] dummyList;
 	private SpriteRenderer sr;
 	// Use this for initialization
 	void Start ()
     {
-		sr = gameObject.GetComponent<SpriteRenderer>(); 
+		sr = gameObject.GetComponent<SpriteRenderer>();
+        testAround();
 	}
 	
 	// Update is called once per frame
@@ -34,13 +35,40 @@ public class PlayerColor : MonoBehaviour {
         return (new Color(red, gre, blu));
     }
 
+    public void displayArmy()
+    {
+        foreach (GameObject obj in dummyList)
+        {
+            obj.GetComponent<DummyScript>().chooseDisplay();
+        }
+    }
+
+    public void testAround()
+    {
+        foreach (GameObject obj in dummyList)
+        {
+            obj.GetComponent<SpriteRenderer>().enabled = false;
+            obj.GetComponent<DummyScript>().stockColor(sr.color);
+            obj.GetComponent<DummyScript>().isDisplay = true;
+        }
+        dummyList[0].transform.position = transform.position + new Vector3(0.5f, 0, 0);
+        dummyList[1].transform.position = transform.position + new Vector3(-0.5f, 0, 0);
+        dummyList[2].transform.position = transform.position + new Vector3(0, 0.5f, 0);
+        dummyList[3].transform.position = transform.position + new Vector3(0, -0.5f, 0);
+    }
+
+    public bool checkDummy(int nb)
+    {
+        return (dummyList[nb].GetComponent<SpriteRenderer>().enabled);
+    }
+
 	void OnTriggerEnter2D(Collider2D other)
 	{
 		if (other.gameObject.tag == "Light")
 		{
 			sr.color = additionColor(sr.color, other.gameObject.GetComponent<SpriteRenderer>().color);
 			Destroy(other.gameObject);
-		}
+        }
         if (other.gameObject.tag == "Wall")
         {
             other.GetComponent<WallScript>().updatePlayer(this.gameObject);

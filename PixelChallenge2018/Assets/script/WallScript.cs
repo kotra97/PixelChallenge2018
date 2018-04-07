@@ -7,7 +7,9 @@ public class WallScript : MonoBehaviour {
     public bool re;
     public bool bl;
     public bool gr;
+    public bool dead;
     Color tmp = new Color(0, 0, 0);
+    RuntimeAnimatorController Death;
 
     private void Start()
     {
@@ -19,6 +21,8 @@ public class WallScript : MonoBehaviour {
             tmp.g = 255;
         GetComponent<SpriteRenderer>().color = tmp;
         tmp = new Color(0, 0, 0);
+
+        dead = false;
     }
 
     Color soustractionColor(Color one, Color two)
@@ -39,6 +43,13 @@ public class WallScript : MonoBehaviour {
         return (new Color(red, gre, blu));
     }
 
+    void deathScene(GameObject player)
+    {
+        player.GetComponent<Animator>().runtimeAnimatorController =
+            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameControllerScript>().animatorPlayerDeath;
+        StartCoroutine(DeathAnim());
+    }
+
     public void updatePlayer(GameObject player)
     {
         if (re)
@@ -48,6 +59,31 @@ public class WallScript : MonoBehaviour {
         if (gr)
             tmp.g = player.gameObject.GetComponent<SpriteRenderer>().color.g;
         player.GetComponent<SpriteRenderer>().color = soustractionColor(player.GetComponent<SpriteRenderer>().color, tmp);
+        if (player.GetComponent<SpriteRenderer>().color.r == 0 &&
+            player.GetComponent<SpriteRenderer>().color.b == 0 &&
+            player.GetComponent<SpriteRenderer>().color.g == 0)
+            deathScene(player);
         tmp = new Color(0, 0, 0);
+    }
+
+    public bool checkColor(Color tmp)
+    {
+        if (re && bl && gr)
+            return (false);
+        if (re && tmp.r == 0)
+            return (false);
+        if (bl && tmp.b == 0)
+            return (false);
+        if (gr && tmp.g == 0)
+            return (false);
+        return (true);
+    }
+
+    IEnumerator DeathAnim()
+    {
+
+        yield return new WaitForSeconds(0.7f);
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<GameControllerScript>().restartScene();
+        yield return null;
     }
 }

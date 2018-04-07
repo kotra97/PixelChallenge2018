@@ -22,29 +22,40 @@ public class playerMovement : MonoBehaviour {
         {
             if (moveDirection.x > 0)
 			{
-                transform.position += new Vector3(distCommune, 0, 0);
+                //AJOUT SON WRONG et OK
+                if (!GetComponent<PlayerColor>().checkDummy(0))
+                    return;
+                transform.position += new Vector3(distCommune, 0, 0); ;
 				transform.rotation = Quaternion.Euler(0, 0, 90f);
 			}
             else
 			{
-                transform.position += new Vector3(-distCommune, 0, 0);
+                if (!GetComponent<PlayerColor>().checkDummy(1))
+                    return;
+                transform.position += new Vector3(-distCommune, 0, 0); ;
 				transform.rotation = Quaternion.Euler(0, 0, -90f);
 			}
             timeLeft = timeUpdate;
+            GetComponent<PlayerColor>().testAround();
         }
         else if (Mathf.Abs(moveDirection.y) == 1)
         {
             if (moveDirection.y > 0)
 			{
-                transform.position += new Vector3(0, distCommune, 0);
+                if (!GetComponent<PlayerColor>().checkDummy(2))
+                    return;
+                transform.position += new Vector3(0, distCommune, 0); ;
 				transform.rotation = Quaternion.Euler(0, 0, 180f);
 			}
             else
 			{
-                transform.position += new Vector3(0, -distCommune, 0);
+                if (!GetComponent<PlayerColor>().checkDummy(3))
+                    return;
+                transform.position += new Vector3(0, -distCommune, 0); ;
 				transform.rotation = Quaternion.Euler(0, 0, 0);
 			}
             timeLeft = timeUpdate;
+            GetComponent<PlayerColor>().testAround();
         }
     }
 
@@ -53,6 +64,8 @@ public class playerMovement : MonoBehaviour {
         if (timeLeft >= 0)
         {
             timeLeft -= Time.deltaTime;
+            if  (timeLeft < 0)
+                GetComponent<PlayerColor>().displayArmy();
             return;
         }
         movement();
