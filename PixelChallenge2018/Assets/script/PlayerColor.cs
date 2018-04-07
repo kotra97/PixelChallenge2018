@@ -73,5 +73,9 @@ public class PlayerColor : MonoBehaviour {
         {
             other.GetComponent<WallScript>().updatePlayer(this.gameObject);
         }
-	}
+        if (other.gameObject.tag == "Finish" && (sr.color.g != 0 || sr.color.r != 0 || sr.color.b != 0))
+        {
+            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameControllerScript>().nextLevel();
+        }
+    }
 }

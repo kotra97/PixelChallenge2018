@@ -5,13 +5,14 @@ using UnityEngine.SceneManagement;
 
 public class GameControllerScript : MonoBehaviour
 {
-    public Scene nextScene;
+    public Object nextScene;
     public Sprite spriteWall = null;
     public Sprite spriteLight = null;
     public RuntimeAnimatorController animatorLight = null;
     public Sprite spritePlayer = null;
     public RuntimeAnimatorController animatorPlayer = null;
     public RuntimeAnimatorController animatorPlayerDeath = null;
+    public RuntimeAnimatorController animatorFinish;
     // Use this for initialization
     void Start()
     {
@@ -36,6 +37,7 @@ public class GameControllerScript : MonoBehaviour
                 t.GetComponent<Animator>().runtimeAnimatorController = animatorLight;
             }
         }
+        GameObject.FindGameObjectWithTag("Finish").GetComponent<Animator>().runtimeAnimatorController = animatorFinish;
         GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().sprite = spritePlayer;
         GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().runtimeAnimatorController = animatorPlayer;
     }
