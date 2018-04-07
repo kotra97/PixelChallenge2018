@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 9d124749c9909e941a4ce62fb7bcc000
+guid: 9c48420f61de956438128638ea47665c
 TextureImporter:
   fileIDToRecycleName:
-    21300000: End 2010_0
-    21300002: End 2010_1
-    21300004: End 2010_2
+    21300000: End 2011_0
+    21300002: End 2011_1
+    21300004: End 2011_2
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -81,44 +81,11 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: iPhone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: Android
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
-  - serializedVersion: 2
-    buildTarget: WebGL
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: End 2010_0
+      name: End 2011_0
       rect:
         serializedVersion: 2
         x: 0
@@ -132,13 +99,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98f70e1a60ba59e4e828926acd74738f
+      spriteID: 5e9fef6b91e2a854b8abde3843658d6d
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: End 2010_1
+      name: End 2011_1
       rect:
         serializedVersion: 2
         x: 500
@@ -152,13 +119,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2af1cda670370c4189cacd905540f88
+      spriteID: 2c9dab1105c0fc04fba6b474d1e682f2
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: End 2010_2
+      name: End 2011_2
       rect:
         serializedVersion: 2
         x: 1000
@@ -172,7 +139,7 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e663c07e1acd4242a3d5dc3a09dba5a
+      spriteID: 2b93e5316b96e9a49b235456ab596c78
       vertices: []
       indices: 
       edges: []
@@ -180,7 +147,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6b10b3e4c9b21c64c9c2839a8f1fd54f
+    spriteID: dbdaf3c40861e7240aa2dee82d21aea1
     vertices: []
     indices: 
     edges: []
