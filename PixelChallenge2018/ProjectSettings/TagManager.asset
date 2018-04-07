@@ -11,6 +11,8 @@ TagManager:
   - Light
   - border
   - Layout
+  - WallList
+  - LightList
   layers:
   - Default
   - TransparentFX

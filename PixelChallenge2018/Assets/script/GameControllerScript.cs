@@ -38,9 +38,12 @@ public class GameControllerScript : MonoBehaviour
                 t.GetComponent<Animator>().runtimeAnimatorController = animatorLight;
             }
         }
-        GameObject.FindGameObjectWithTag("Finish").GetComponent<Animator>().runtimeAnimatorController = animatorFinish;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().sprite = spritePlayer;
-        GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().runtimeAnimatorController = animatorPlayer;
+        if (animatorFinish != null)
+            GameObject.FindGameObjectWithTag("Finish").GetComponent<Animator>().runtimeAnimatorController = animatorFinish;
+        if (spritePlayer != null)
+            GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().sprite = spritePlayer;
+        if (animatorPlayer != null)
+            GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().runtimeAnimatorController = animatorPlayer;
     }
 	
 	void Update () {
@@ -69,6 +72,9 @@ public class GameControllerScript : MonoBehaviour
 
     public void nextLevel()
     {
+        GameObject.FindGameObjectWithTag("Player").SetActive(false);
+        GameObject.FindGameObjectWithTag("WallList").SetActive(false);
+        GameObject.FindGameObjectWithTag("LightList").SetActive(false);
         StartCoroutine(EndLevel());
     }
 
@@ -76,7 +82,7 @@ public class GameControllerScript : MonoBehaviour
     {
         if (animatorLayout != null)
             GameObject.FindGameObjectWithTag("Layout").GetComponent<Animator>().runtimeAnimatorController = animatorLayout;
-        yield return new WaitForSeconds(0.7f);
+        yield return new WaitForSeconds(1.4f);
         SceneManager.LoadScene(nextScene.name);
         yield return null;
     }

@@ -276,6 +276,11 @@ Prefab:
       propertyPath: animatorFinish
       value: 
       objectReference: {fileID: 9100000, guid: bc02aaddf34bece4eb387e0751f2ed48, type: 2}
+    - target: {fileID: 114255014358156362, guid: f1a30f0c6afba074c8c2c57a60efae8d,
+        type: 2}
+      propertyPath: animatorLayout
+      value: 
+      objectReference: {fileID: 9100000, guid: 551711f16aad61d4b86be40fb0441673, type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1a30f0c6afba074c8c2c57a60efae8d, type: 2}
   m_IsPrefabParent: 0
@@ -455,6 +460,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 3
       objectReference: {fileID: 0}
+    - target: {fileID: 1765797179820846, guid: e1941d110e0aff74ebfc8814a88fbe38, type: 2}
+      propertyPath: m_TagString
+      value: LightList
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1941d110e0aff74ebfc8814a88fbe38, type: 2}
   m_IsPrefabParent: 0
@@ -631,6 +640,10 @@ Prefab:
     - target: {fileID: 4176076351656364, guid: a31920b63b57ca047849aba04acaa596, type: 2}
       propertyPath: m_RootOrder
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1394532973635602, guid: a31920b63b57ca047849aba04acaa596, type: 2}
+      propertyPath: m_TagString
+      value: WallList
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a31920b63b57ca047849aba04acaa596, type: 2}
