@@ -66,15 +66,18 @@ public class PlayerColor : MonoBehaviour {
 	{
 		if (other.gameObject.tag == "Light")
 		{
-			sr.color = additionColor(sr.color, other.gameObject.GetComponent<SpriteRenderer>().color);
+            GetComponent<playerMovement>().getColorSound();
+            sr.color = additionColor(sr.color, other.gameObject.GetComponent<SpriteRenderer>().color);
 			Destroy(other.gameObject);
         }
         if (other.gameObject.tag == "Wall")
         {
+            GetComponent<playerMovement>().lostSound();
             other.GetComponent<WallScript>().updatePlayer(this.gameObject);
         }
         if (other.gameObject.tag == "Finish" && (sr.color.g != 0 || sr.color.r != 0 || sr.color.b != 0))
         {
+            GetComponent<playerMovement>().snowSound();
             GameObject.FindGameObjectWithTag("GameController").GetComponent<GameControllerScript>().nextLevel();
         }
     }
