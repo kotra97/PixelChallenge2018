@@ -45,9 +45,7 @@ public class WallScript : MonoBehaviour {
 
     void deathScene(GameObject player)
     {
-        player.GetComponent<Animator>().runtimeAnimatorController =
-            GameObject.FindGameObjectWithTag("GameController").GetComponent<GameControllerScript>().animatorPlayerDeath;
-        StartCoroutine(DeathAnim());
+        GameObject.FindGameObjectWithTag("GameController").GetComponent<GameControllerScript>().restartScene();
     }
 
     public void updatePlayer(GameObject player)

@@ -49,7 +49,7 @@ public class GameControllerScript : MonoBehaviour
 	void Update () {
 		if (Input.GetButtonDown("Joystick Start") || Input.GetKeyDown(KeyCode.R))
         {
-			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            restartScene();
         }
 		if (Input.GetKeyDown(KeyCode.Alpha1))
         {
@@ -65,9 +65,17 @@ public class GameControllerScript : MonoBehaviour
         }
 	}
 
+    IEnumerator endScene()
+    {
+        
+        yield return new WaitForSeconds(0.7f);
+        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+    }
+
     public void restartScene()
     {
-        SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().runtimeAnimatorController = animatorPlayerDeath;
+        StartCoroutine(endScene());        
     }
 
     public void nextLevel()
