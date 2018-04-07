@@ -42,6 +42,25 @@ public class GameControllerScript : MonoBehaviour
         GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().sprite = spritePlayer;
         GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().runtimeAnimatorController = animatorPlayer;
     }
+	
+	void Update () {
+		if (Input.GetButtonDown("Joystick Start") || Input.GetKeyDown(KeyCode.R))
+        {
+			SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+        }
+		if (Input.GetKeyDown(KeyCode.Alpha1))
+        {
+			SceneManager.LoadScene("1990");
+        }
+		if (Input.GetKeyDown(KeyCode.Alpha2))
+        {
+			SceneManager.LoadScene("2000");
+        }
+		if (Input.GetKeyDown(KeyCode.Alpha3))
+        {
+			SceneManager.LoadScene("2010");
+        }
+	}
 
     public void restartScene()
     {

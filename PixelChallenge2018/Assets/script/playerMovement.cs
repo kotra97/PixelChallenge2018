@@ -18,9 +18,9 @@ public class playerMovement : MonoBehaviour {
     private void movement()
     {
         moveDirection = new Vector3(Input.GetAxis("Joystick Direction X"), -Input.GetAxis("Joystick Direction Y"), 0);
-        if (Mathf.Abs(moveDirection.x) == 1)
+        if (Mathf.Abs(moveDirection.x) == 1 || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
-            if (moveDirection.x > 0)
+            if (moveDirection.x > 0 || Input.GetKey(KeyCode.RightArrow))
 			{
                 //AJOUT SON WRONG et OK
                 if (!GetComponent<PlayerColor>().checkDummy(0))
@@ -38,9 +38,9 @@ public class playerMovement : MonoBehaviour {
             timeLeft = timeUpdate;
             GetComponent<PlayerColor>().testAround();
         }
-        else if (Mathf.Abs(moveDirection.y) == 1)
+        else if (Mathf.Abs(moveDirection.y) == 1 || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.UpArrow))
         {
-            if (moveDirection.y > 0)
+            if (moveDirection.y > 0 || Input.GetKey(KeyCode.UpArrow))
 			{
                 if (!GetComponent<PlayerColor>().checkDummy(2))
                     return;
