@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour {
 
+	private AudioSource source;
+	public AudioClip movementAudio;
     float timeUpdate = 0.2f;
     float timeLeft = 0;
     Vector3 moveDirection;
@@ -12,7 +14,11 @@ public class playerMovement : MonoBehaviour {
     // Use this for initialization
     void Start ()
     {
-		
+		source = GetComponent<AudioSource>();
+	}
+
+	void moveSound() {
+		source.PlayOneShot(movementAudio, 1f);
 	}
 
     private void movement()
@@ -20,6 +26,7 @@ public class playerMovement : MonoBehaviour {
         moveDirection = new Vector3(Input.GetAxis("Joystick Direction X"), -Input.GetAxis("Joystick Direction Y"), 0);
         if (Mathf.Abs(moveDirection.x) == 1 || Input.GetKey(KeyCode.LeftArrow) || Input.GetKey(KeyCode.RightArrow))
         {
+			moveSound();
             if (moveDirection.x > 0 || Input.GetKey(KeyCode.RightArrow))
 			{
                 //AJOUT SON WRONG et OK
@@ -40,6 +47,7 @@ public class playerMovement : MonoBehaviour {
         }
         else if (Mathf.Abs(moveDirection.y) == 1 || Input.GetKey(KeyCode.DownArrow) || Input.GetKey(KeyCode.UpArrow))
         {
+			moveSound();
             if (moveDirection.y > 0 || Input.GetKey(KeyCode.UpArrow))
 			{
                 if (!GetComponent<PlayerColor>().checkDummy(2))
