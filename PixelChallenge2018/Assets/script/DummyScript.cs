@@ -20,7 +20,21 @@ public class DummyScript : MonoBehaviour {
     {
         GetComponent<SpriteRenderer>().enabled = isDisplay;
     }
-    
+
+    private void OnTriggerStay2D(Collider2D other)
+    {
+        if (other.gameObject.tag == "Wall")
+        {
+            if (other.GetComponent<WallScript>().checkColor(colorCheck))
+                isDisplay = true;
+            else
+                isDisplay = false;
+        }
+        else if (other.gameObject.tag == "border")
+        {
+            isDisplay = false;
+        }
+    }
 
     private void OnTriggerEnter2D(Collider2D other)
     {

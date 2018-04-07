@@ -74,6 +74,7 @@ public class GameControllerScript : MonoBehaviour
 
     public void restartScene()
     {
+        GameObject.FindGameObjectWithTag("Player").GetComponent<playerMovement>().deathSound();
         GameObject.FindGameObjectWithTag("Player").GetComponent<Animator>().runtimeAnimatorController = animatorPlayerDeath;
         StartCoroutine(endScene());        
     }
