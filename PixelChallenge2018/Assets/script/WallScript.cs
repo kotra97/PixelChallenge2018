@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class WallCmp : MonoBehaviour {
+public class WallScript : MonoBehaviour {
 
     public bool re;
     public bool bl;

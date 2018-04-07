@@ -9,45 +9,50 @@ Prefab:
     m_Modifications: []
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 0}
-  m_RootGameObject: {fileID: 1839585382825760}
+  m_RootGameObject: {fileID: 1914644672947020}
   m_IsPrefabParent: 1
---- !u!1 &1839585382825760
+--- !u!1 &1914644672947020
 GameObject:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   serializedVersion: 5
   m_Component:
-  - component: {fileID: 4460267098855928}
-  - component: {fileID: 114365478507341626}
+  - component: {fileID: 4894057038250798}
+  - component: {fileID: 114255014358156362}
   m_Layer: 0
-  m_Name: GameController
+  m_Name: GameController90
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!4 &4460267098855928
+--- !u!4 &4894057038250798
 Transform:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1839585382825760}
+  m_GameObject: {fileID: 1914644672947020}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 6.4006553, y: 0.6386328, z: -4.932064}
+  m_LocalPosition: {x: 0.4603391, y: 1.0563229, z: -1.953125}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &114365478507341626
+--- !u!114 &114255014358156362
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1839585382825760}
+  m_GameObject: {fileID: 1914644672947020}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8caa50e7e70d7f941b8e2347f271033c, type: 3}
+  m_Script: {fileID: 11500000, guid: 7067d1d3b206e4e4b925909b273cf919, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spriteWall: {fileID: 21300000, guid: 9906baea0786ec247943d3ce2f411581, type: 3}
+  spriteLight: {fileID: 21300000, guid: 06c161b3820ef494fbbc76b6b6186cc9, type: 3}
+  animatorLight: {fileID: 0}
+  spritePlayer: {fileID: 21300000, guid: b5013ec52cb66c647b53cf3ff498e7ea, type: 3}
+  animatorPlayer: {fileID: 9100000, guid: ed7bcb8493134b74f9913201ea3d3801, type: 2}
