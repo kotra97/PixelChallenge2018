@@ -20,6 +20,7 @@ public class DummyScript : MonoBehaviour {
     {
         GetComponent<SpriteRenderer>().enabled = isDisplay;
     }
+    
 
     private void OnTriggerEnter2D(Collider2D other)
     {
@@ -29,6 +30,11 @@ public class DummyScript : MonoBehaviour {
                 isDisplay = true;
             else
                 isDisplay = false;
+        }
+        else if (other.gameObject.tag == "border")
+        {
+            Debug.Log("AH");
+            isDisplay = false;
         }
     }
 }
