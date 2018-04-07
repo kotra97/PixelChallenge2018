@@ -1,10 +1,11 @@
 fileFormatVersion: 2
-guid: 9d124749c9909e941a4ce62fb7bcc000
+guid: d921b4cd6ad62d34a9dd2ef2059efd72
 TextureImporter:
   fileIDToRecycleName:
-    21300000: End 2010_0
-    21300002: End 2010_1
-    21300004: End 2010_2
+    21300000: end02_0
+    21300002: end02_1
+    21300004: end02_2
+    21300006: end02_3
   externalObjects: {}
   serializedVersion: 5
   mipmaps:
@@ -118,7 +119,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: End 2010_0
+      name: end02_0
       rect:
         serializedVersion: 2
         x: 0
@@ -132,13 +133,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 98f70e1a60ba59e4e828926acd74738f
+      spriteID: 0462c0bc17c8f1b46961299ec922610a
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: End 2010_1
+      name: end02_1
       rect:
         serializedVersion: 2
         x: 500
@@ -152,13 +153,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: e2af1cda670370c4189cacd905540f88
+      spriteID: 7f4225b6ffe5bfa45a301a86bb46ea6e
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: End 2010_2
+      name: end02_2
       rect:
         serializedVersion: 2
         x: 1000
@@ -172,7 +173,27 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5e663c07e1acd4242a3d5dc3a09dba5a
+      spriteID: b2155477a9ec1e543913d43415661813
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: end02_3
+      rect:
+        serializedVersion: 2
+        x: 1500
+        y: 0
+        width: 500
+        height: 500
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: aa1fbb5e1a1046b49b4934194df480f7
       vertices: []
       indices: 
       edges: []
@@ -180,7 +201,7 @@ TextureImporter:
     outline: []
     physicsShape: []
     bones: []
-    spriteID: 6b10b3e4c9b21c64c9c2839a8f1fd54f
+    spriteID: 50926b1dbc5bb384090a5bb0028f6af9
     vertices: []
     indices: 
     edges: []
