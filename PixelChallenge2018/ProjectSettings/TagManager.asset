@@ -9,6 +9,7 @@ TagManager:
   - Wall
   - Color
   - Light
+  - border
   layers:
   - Default
   - TransparentFX

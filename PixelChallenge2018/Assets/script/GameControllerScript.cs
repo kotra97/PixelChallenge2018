@@ -12,7 +12,8 @@ public class GameControllerScript : MonoBehaviour
     public Sprite spritePlayer = null;
     public RuntimeAnimatorController animatorPlayer = null;
     public RuntimeAnimatorController animatorPlayerDeath = null;
-    public RuntimeAnimatorController animatorFinish;
+    public RuntimeAnimatorController animatorFinish = null;
+    public RuntimeAnimatorController animatorLayout = null;
     // Use this for initialization
     void Start()
     {
@@ -68,6 +69,15 @@ public class GameControllerScript : MonoBehaviour
 
     public void nextLevel()
     {
+        StartCoroutine(EndLevel());
+    }
+
+    IEnumerator EndLevel()
+    {
+        if (animatorLayout != null)
+            GameObject.FindGameObjectWithTag("Layout").GetComponent<Animator>().runtimeAnimatorController = animatorLayout;
+        yield return new WaitForSeconds(0.7f);
         SceneManager.LoadScene(nextScene.name);
+        yield return null;
     }
 }
