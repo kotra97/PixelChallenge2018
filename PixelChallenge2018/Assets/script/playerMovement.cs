@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class playerMovement : MonoBehaviour {
 
-    float timeUpdate = 0.4f;
+    float timeUpdate = 0.2f;
     float timeLeft = 0;
     Vector3 moveDirection;
     float distCommune = 0.5f;
