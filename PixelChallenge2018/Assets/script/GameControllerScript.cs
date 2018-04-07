@@ -73,8 +73,18 @@ public class GameControllerScript : MonoBehaviour
     public void nextLevel()
     {
         GameObject.FindGameObjectWithTag("Player").SetActive(false);
-        GameObject.FindGameObjectWithTag("WallList").SetActive(false);
-        GameObject.FindGameObjectWithTag("LightList").SetActive(false);
+
+        GameObject[] tmp =  GameObject.FindGameObjectsWithTag("WallList");
+        foreach (GameObject i in tmp)
+        {
+            i.SetActive(false);
+        }
+
+        tmp = GameObject.FindGameObjectsWithTag("LightList");
+        foreach (GameObject i in tmp)
+        {
+            i.SetActive(false);
+        }
         StartCoroutine(EndLevel());
     }
 

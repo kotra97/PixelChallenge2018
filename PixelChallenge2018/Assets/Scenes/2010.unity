@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.22380273, g: 0.24376705, b: 0.2653493, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -427,7 +427,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 8
+  m_RootOrder: 7
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &52399244
 GameObject:
@@ -792,6 +792,11 @@ MonoBehaviour:
   bl: 1
   gr: 1
   dead: 0
+--- !u!4 &82441869 stripped
+Transform:
+  m_PrefabParentObject: {fileID: 4156090069973094, guid: e81b287e6304c1b4aa7816ea75aa7534,
+    type: 2}
+  m_PrefabInternal: {fileID: 1321895902}
 --- !u!1 &103592317
 GameObject:
   m_ObjectHideFlags: 0
@@ -3153,7 +3158,7 @@ GameObject:
   - component: {fileID: 450910846}
   m_Layer: 0
   m_Name: New Sprite
-  m_TagString: Untagged
+  m_TagString: LightList
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -3214,7 +3219,7 @@ Transform:
   m_LocalScale: {x: 1, y: 0.1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 10
+  m_RootOrder: 9
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &466102694
 GameObject:
@@ -3418,6 +3423,17 @@ Prefab:
       propertyPath: animatorFinish
       value: 
       objectReference: {fileID: 9100000, guid: d84eed18724fac34e89b9d7c453837f9, type: 2}
+    - target: {fileID: 114255014358156362, guid: f1a30f0c6afba074c8c2c57a60efae8d,
+        type: 2}
+      propertyPath: animatorLayout
+      value: 
+      objectReference: {fileID: 9100000, guid: f6d95f5e85a13e84fa20a4b1a8281ab5, type: 2}
+    - target: {fileID: 114255014358156362, guid: f1a30f0c6afba074c8c2c57a60efae8d,
+        type: 2}
+      propertyPath: nextScene
+      value: 
+      objectReference: {fileID: 102900000, guid: f1349713a72a3c549ac3346d4c50aeba,
+        type: 3}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1a30f0c6afba074c8c2c57a60efae8d, type: 2}
   m_IsPrefabParent: 0
@@ -6072,7 +6088,7 @@ GameObject:
   - component: {fileID: 861232418}
   m_Layer: 0
   m_Name: ColorWall
-  m_TagString: Untagged
+  m_TagString: WallList
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -7345,7 +7361,7 @@ GameObject:
   - component: {fileID: 998860910}
   m_Layer: 0
   m_Name: WallList
-  m_TagString: Untagged
+  m_TagString: WallList
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -10799,7 +10815,7 @@ Prefab:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Modification:
-    m_TransformParent: {fileID: 0}
+    m_TransformParent: {fileID: 1959450273}
     m_Modifications:
     - target: {fileID: 4156090069973094, guid: e81b287e6304c1b4aa7816ea75aa7534, type: 2}
       propertyPath: m_LocalPosition.x
@@ -10815,15 +10831,15 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4156090069973094, guid: e81b287e6304c1b4aa7816ea75aa7534, type: 2}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4156090069973094, guid: e81b287e6304c1b4aa7816ea75aa7534, type: 2}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4156090069973094, guid: e81b287e6304c1b4aa7816ea75aa7534, type: 2}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 4156090069973094, guid: e81b287e6304c1b4aa7816ea75aa7534, type: 2}
       propertyPath: m_LocalRotation.w
@@ -10831,7 +10847,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4156090069973094, guid: e81b287e6304c1b4aa7816ea75aa7534, type: 2}
       propertyPath: m_RootOrder
-      value: 7
+      value: 9
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e81b287e6304c1b4aa7816ea75aa7534, type: 2}
@@ -11720,7 +11736,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4415595703921870, guid: e1ec6f0660b56d64eafde8ba772e7177, type: 2}
       propertyPath: m_RootOrder
-      value: 11
+      value: 10
       objectReference: {fileID: 0}
     - target: {fileID: 212114907543468094, guid: e1ec6f0660b56d64eafde8ba772e7177,
         type: 2}
@@ -11739,6 +11755,10 @@ Prefab:
     - target: {fileID: 4415595703921870, guid: e1ec6f0660b56d64eafde8ba772e7177, type: 2}
       propertyPath: m_LocalScale.y
       value: 0.23
+      objectReference: {fileID: 0}
+    - target: {fileID: 1887213234195008, guid: e1ec6f0660b56d64eafde8ba772e7177, type: 2}
+      propertyPath: m_TagString
+      value: LightList
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: e1ec6f0660b56d64eafde8ba772e7177, type: 2}
@@ -16407,9 +16427,10 @@ GameObject:
   m_Component:
   - component: {fileID: 1923667444}
   - component: {fileID: 1923667443}
+  - component: {fileID: 1923667445}
   m_Layer: 0
   m_Name: Background
-  m_TagString: Untagged
+  m_TagString: Layout
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16470,8 +16491,26 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
-  m_RootOrder: 9
+  m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1923667445
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1923667442}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 0}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
 --- !u!1 &1936807889
 GameObject:
   m_ObjectHideFlags: 0
@@ -16744,7 +16783,7 @@ GameObject:
   - component: {fileID: 1959450273}
   m_Layer: 0
   m_Name: LightList
-  m_TagString: Untagged
+  m_TagString: LightList
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -16769,6 +16808,7 @@ Transform:
   - {fileID: 1680722212}
   - {fileID: 1694699264}
   - {fileID: 1032445569}
+  - {fileID: 82441869}
   m_Father: {fileID: 0}
   m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
