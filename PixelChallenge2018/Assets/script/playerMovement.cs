@@ -18,8 +18,7 @@ public class playerMovement : MonoBehaviour {
     float timeLeft = 0;
     Vector3 moveDirection;
     float distCommune = 0.5f;
-
-    // Use this for initialization
+    
     void Start ()
     {
 		source = GetComponent<AudioSource>();
@@ -41,7 +40,6 @@ public class playerMovement : MonoBehaviour {
 	public void moveSound()
     {
         int nb = nbColor();
-        Debug.Log(nb);
         if (nb == 1)
     		source.PlayOneShot(movementAudio1, 1f);
         if (nb == 2)
@@ -82,7 +80,6 @@ public class playerMovement : MonoBehaviour {
         {
             if (moveDirection.x > 0 || Input.GetKey(KeyCode.RightArrow))
 			{
-                //AJOUT SON WRONG et OK
                 if (!GetComponent<PlayerColor>().checkDummy(0))
                 {
                     moveWrongSound();

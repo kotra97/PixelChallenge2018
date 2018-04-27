@@ -6,49 +6,26 @@ public class DummyScript : MonoBehaviour {
 
     public bool isDisplay;
     public Color colorCheck;
-	// Use this for initialization
-	void Start () {
-		
-	}
 
-    public void stockColor(Color tmp)
-    {
-        colorCheck = tmp;
-    }
+	void Start (){}
 
-    public void chooseDisplay()
-    {
-        GetComponent<SpriteRenderer>().enabled = isDisplay;
-    }
+    public void stockColor(Color tmp) {colorCheck = tmp;}
+
+    public void chooseDisplay() {GetComponent<SpriteRenderer>().enabled = isDisplay;}
 
     private void OnTriggerStay2D(Collider2D other)
     {
         if (other.gameObject.tag == "Wall")
-        {
-            if (other.GetComponent<WallScript>().checkColor(colorCheck))
-                isDisplay = true;
-            else
-                isDisplay = false;
-        }
+            isDisplay = other.GetComponent<WallScript>().checkColor(colorCheck);
         else if (other.gameObject.tag == "border")
-        {
             isDisplay = false;
-        }
     }
 
     private void OnTriggerEnter2D(Collider2D other)
     {
         if (other.gameObject.tag == "Wall")
-        {
-            if (other.GetComponent<WallScript>().checkColor(colorCheck))
-                isDisplay = true;
-            else
-                isDisplay = false;
-        }
+            isDisplay = other.GetComponent<WallScript>().checkColor(colorCheck);
         else if (other.gameObject.tag == "border")
-        {
-            Debug.Log("AH");
             isDisplay = false;
-        }
     }
 }

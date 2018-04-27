@@ -13,6 +13,7 @@ TagManager:
   - Layout
   - WallList
   - LightList
+  - Music
   layers:
   - Default
   - TransparentFX

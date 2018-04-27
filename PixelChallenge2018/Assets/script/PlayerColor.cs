@@ -5,17 +5,15 @@ using UnityEngine;
 public class PlayerColor : MonoBehaviour {
     public GameObject[] dummyList;
 	private SpriteRenderer sr;
-	// Use this for initialization
+
 	void Start ()
     {
-		sr = gameObject.GetComponent<SpriteRenderer>();
+        sr = gameObject.GetComponent<SpriteRenderer>();
+        sr.color = new Color(255, 255, 255);
         testAround();
 	}
 	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+	void Update () {}
 	
     Color additionColor(Color one, Color two)
     {

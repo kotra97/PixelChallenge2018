@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 0}
-  m_IndirectSpecularColor: {r: 0.1273174, g: 0.13414761, b: 0.12107885, a: 1}
+  m_IndirectSpecularColor: {r: 0.12731704, g: 0.13414727, b: 0.121078536, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -4324,9 +4324,8 @@ Prefab:
     - target: {fileID: 114255014358156362, guid: f1a30f0c6afba074c8c2c57a60efae8d,
         type: 2}
       propertyPath: nextScene
-      value: 
-      objectReference: {fileID: 102900000, guid: 2572dbf165864bc4b99622ebef0faa97,
-        type: 3}
+      value: EndScreen
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f1a30f0c6afba074c8c2c57a60efae8d, type: 2}
   m_IsPrefabParent: 0
@@ -8745,7 +8744,7 @@ GameObject:
   - component: {fileID: 991089327}
   m_Layer: 0
   m_Name: Music-Full
-  m_TagString: Untagged
+  m_TagString: Music
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

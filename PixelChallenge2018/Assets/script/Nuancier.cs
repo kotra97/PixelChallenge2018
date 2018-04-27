@@ -4,38 +4,44 @@ using UnityEngine;
 
 public class Nuancier : MonoBehaviour {
 
-	public GameObject player;
     public Sprite[] sprites;
-	// Use this for initialization
-	void Start () {
+    private SpriteRenderer colPlayer;
+    private SpriteRenderer rend;
+	void Start ()
+    {
+        colPlayer = GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>();
+        rend = gameObject.GetComponent<SpriteRenderer>();
 	}
 	
-	// Update is called once per frame
 	void Update () {
-		float r = player.GetComponent<SpriteRenderer>().color.r;
-		float g = player.GetComponent<SpriteRenderer>().color.g;
-		float b = player.GetComponent<SpriteRenderer>().color.b;
-		if (r != 0)
-			r = 1;
-		if (g != 0)
-			g = 1;
-		if (b != 0)
-			b = 1;
-		if (r == 0 && g == 0 && b == 0)
-			gameObject.GetComponent<SpriteRenderer>().sprite = sprites[0];
-		if (r == 0 && g == 1 && b == 0)
-			gameObject.GetComponent<SpriteRenderer>().sprite = sprites[1];
-		if (r == 1 && g == 0 && b == 0)
-			gameObject.GetComponent<SpriteRenderer>().sprite = sprites[2];
-		if (r == 0 && g == 0 && b == 1)
-			gameObject.GetComponent<SpriteRenderer>().sprite = sprites[3];
-		if (r == 0 && g == 1 && b == 1)
-			gameObject.GetComponent<SpriteRenderer>().sprite = sprites[4];
-		if (r == 1 && g == 0 && b == 1)
-			gameObject.GetComponent<SpriteRenderer>().sprite = sprites[5];
-		if (r == 1 && g == 1 && b == 0)
-			gameObject.GetComponent<SpriteRenderer>().sprite = sprites[6];
-		if (r == 1 && g == 1 && b == 1)
-			gameObject.GetComponent<SpriteRenderer>().sprite = sprites[7];
+		float r = colPlayer.color.r;
+		float g = colPlayer.color.g;
+		float b = colPlayer.color.b;
+
+        if (r == 255)
+        {
+            if (g == 255)
+            {
+                if (b == 255)
+                    rend.sprite = sprites[7];
+                else
+                    rend.sprite = sprites[6];
+            }
+            else if (b == 255)
+                rend.sprite = sprites[5];
+            else
+                rend.sprite = sprites[2];
+        }
+        else if (g == 255)
+        {
+            if (b == 255)
+                rend.sprite = sprites[4];
+            else
+                rend.sprite = sprites[1];
+        }
+        else if (b == 255)
+            rend.sprite = sprites[3];
+        else
+			rend.sprite = sprites[0];
 	}
 }
